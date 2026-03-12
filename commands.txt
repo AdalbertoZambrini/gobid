@@ -1,0 +1,8 @@
+AIR to live update:
+air --build.cmd "go build -o ./bin/api.exe ./cmd/api" --build.bin ".\bin\api.exe"
+
+upgrade migrations with TERN:
+go run ./cmd/terndotenv
+
+print database table users with DOCKER:
+docker compose exec db psql -U postgres -d gobid -c "\d users"
